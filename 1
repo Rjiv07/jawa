@@ -1,0 +1,40 @@
+public class ExceptionHandlingDemo {
+
+    public static void main(String[] args) {
+        try {
+        
+            int result = 10 / 0;
+            System.out.println("Result: " + result);
+
+            
+            int[] numbers = {1, 2, 3};
+            System.out.println("Element: " + numbers[5]);
+
+          
+            String invalidNumber = "abc";
+            int converted = Integer.parseInt(invalidNumber);
+            System.out.println("Converted number: " + converted);
+        } 
+        
+
+        catch (ArithmeticException e) {
+            System.out.println("Caught ArithmeticException: " + e.getMessage());
+        } 
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Caught ArrayIndexOutOfBoundsException: " + e.getMessage());
+        } 
+        catch (NumberFormatException e) {
+            System.out.println("Caught NumberFormatException: " + e.getMessage());
+        } 
+        catch (Exception e) {
+          
+            System.out.println("Caught General Exception: " + e.getMessage());
+        } 
+        finally {
+          
+            System.out.println("Finally block executed.");
+        }
+
+        System.out.println("Program continues after exception handling.");
+    }
+}

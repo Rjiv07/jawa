@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class CollectionsDemo {
+    public static void main(String[] args) {
+
+        // ------- ArrayList Example -------
+        System.out.println("=== ArrayList Example ===");
+
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // Adding elements
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Mango");
+
+        // Accessing elements
+        System.out.println("Fruits: " + fruits);
+
+        // Removing an element
+        fruits.remove("Banana");
+        System.out.println("After removal: " + fruits);
+
+        // Iterating
+        for (String fruit : fruits) {
+            System.out.println("Fruit: " + fruit);
+        }
+
+        // ------- LinkedList Example -------
+        System.out.println("\n=== LinkedList Example ===");
+
+        LinkedList<Integer> numbers = new LinkedList<>();
+
+        // Adding elements
+        numbers.add(10);
+        numbers.add(20);
+        numbers.addFirst(5);   // Add at beginning
+        numbers.addLast(30);   // Add at end
+
+        // Accessing elements
+        System.out.println("Numbers: " + numbers);
+
+        // Removing elements
+        numbers.removeFirst(); // Removes 5
+        numbers.removeLast();  // Removes 30
+        System.out.println("After removal: " + numbers);
+
+        // Iterating
+        for (Integer num : numbers) {
+            System.out.println("Number: " + num);
+        }
+    }
+}

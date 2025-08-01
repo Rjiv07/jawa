@@ -1,0 +1,34 @@
+// Enum definition
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+
+public class EnumAutoboxingDemo {
+
+    public static void main(String[] args) {
+        // ENUM USAGE
+        Day today = Day.SATURDAY;
+
+        switch (today) {
+            case SATURDAY:
+            case SUNDAY:
+                System.out.println("It's weekend!");
+                break;
+            default:
+                System.out.println("It's a weekday.");
+        }
+
+        // AUTOBOXING DEMONSTRATION
+        int num = 10;
+
+        // Autoboxing: primitive int to Integer object
+        Integer numObject = num;
+
+        // Unboxing: Integer object back to primitive int
+        int anotherNum = numObject;
+
+        System.out.println("Primitive value: " + num);
+        System.out.println("Autoboxed Integer: " + numObject);
+        System.out.println("Unboxed value: " + anotherNum);
+    }
+}

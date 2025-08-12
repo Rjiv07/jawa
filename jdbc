@@ -1,0 +1,13 @@
+
+public class Main14 {
+    public static void main(String[] args) throws Exception {
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","02082003");
+        Statement st = con.createStatement();
+        st.executeUpdate("CREATE TABLE IF NOT EXISTS users(id INT, name VARCHAR(20))");
+        st.executeUpdate("INSERT INTO users VALUES(1,'John')");
+        ResultSet rs = st.executeQuery("SELECT * FROM users");
+        while(rs.next()) System.out.println(rs.getInt(1)+" "+rs.getString(2));
+        con.close();
+    }
+}
+
